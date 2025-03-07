@@ -31,6 +31,13 @@ export default function HomeScreen() {
           >
             <ThemedText style={styles.buttonText}>Iniciar Sesión</ThemedText>
           </TouchableOpacity>
+
+          <TouchableOpacity 
+            style={styles.registerButton}
+            onPress={() => router.push('/register')}
+          >
+            <ThemedText style={styles.registerButtonText}>Registrarse</ThemedText>
+          </TouchableOpacity>
         </ThemedView>
       </ThemedView>
     </ParallaxScrollView>
@@ -58,14 +65,31 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 30,
     borderRadius: 25,
+    width: 200,
+    alignItems: 'center',
     elevation: 3,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
   },
+  registerButton: {
+    backgroundColor: 'transparent',
+    paddingVertical: 12,
+    paddingHorizontal: 30,
+    borderRadius: 25,
+    width: 200,
+    alignItems: 'center',
+    borderWidth: 2,
+    borderColor: '#A1CEDC',
+  },
   buttonText: {
     color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  registerButtonText: {
+    color: '#A1CEDC',
     fontSize: 18,
     fontWeight: 'bold',
   },
